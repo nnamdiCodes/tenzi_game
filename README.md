@@ -1,0 +1,2 @@
+**Description**
+- Challenge yourself to match all dice as quickly as possible while the game keep track of your roll count and time taken for each session. With a built in best time feature, you can aim to break your own record and improve with every round.
