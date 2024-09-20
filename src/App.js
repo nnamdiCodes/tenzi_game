@@ -48,7 +48,7 @@ function App() {
         localStorage.setItem('bestTime', JSON.stringify(currentTimeTaken))
       }
     }
-  }, [dice, bestTime])
+  }, [dice, bestTime, startTime])
 
   const handleDieClick = (id) => {
     const holdDice = dice.map((die) => {
