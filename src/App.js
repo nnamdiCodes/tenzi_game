@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     setStartTime(Date.now())
    
-  }, []) 
+  }, [startTime]) 
 
   useEffect(() => {
     const allHeld = dice.every(die => die.isHeld)
@@ -48,7 +48,7 @@ function App() {
         localStorage.setItem('bestTime', JSON.stringify(currentTimeTaken))
       }
     }
-  }, [dice])
+  }, [dice, bestTime])
 
   const handleDieClick = (id) => {
     const holdDice = dice.map((die) => {
