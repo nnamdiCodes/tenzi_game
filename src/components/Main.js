@@ -1,5 +1,4 @@
 import React from 'react'
-/* import Confetti from 'react-confetti' */
 import Heading from './Heading'
 import Content from './Content'
 import Die from './Die'

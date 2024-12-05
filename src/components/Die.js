@@ -1,46 +1,39 @@
 const Die = ({ die, handleDieClick }) => {
   
   const renderDots = () => {
-    const dots = [];
-    switch (die.value) {
-      case 1:
-        dots.push(<div key={1} className="dot center"></div>);
-        break;
-      case 2:
-        dots.push(<div key={1} className="dot top-left"></div>);
-        dots.push(<div key={2} className="dot bottom-right"></div>);
-        break;
-      case 3:
-        dots.push(<div key={1} className="dot top-left"></div>);
-        dots.push(<div key={2} className="dot center"></div>);
-        dots.push(<div key={3} className="dot bottom-right"></div>);
-        break;
-      case 4:
-        dots.push(<div key={1} className="dot top-left"></div>);
-        dots.push(<div key={2} className="dot top-right"></div>);
-        dots.push(<div key={3} className="dot bottom-left"></div>);
-        dots.push(<div key={4} className="dot bottom-right"></div>);
-        break;
-      case 5:
-        dots.push(<div key={1} className="dot top-left"></div>);
-        dots.push(<div key={2} className="dot top-right"></div>);
-        dots.push(<div key={3} className="dot center"></div>);
-        dots.push(<div key={4} className="dot bottom-left"></div>);
-        dots.push(<div key={5} className="dot bottom-right"></div>);
-        break;
-      case 6:
-        dots.push(<div key={1} className="dot top-left"></div>);
-        dots.push(<div key={2} className="dot top-right"></div>);
-        dots.push(<div key={3} className="dot bottom-left"></div>);
-        dots.push(<div key={4} className="dot bottom-right"></div>);
-        dots.push(<div key={5} className="dot top-center"></div>);
-        dots.push(<div key={6} className="dot bottom-center"></div>);
-        break;
-      default:
-        break;
-    }
+
+    const dots = []
+      if (die.value === 1) {
+          dots.push(<div key={1} className="dot center"></div>)
+      } else if (die.value === 2) {
+          dots.push(<div key={1} className="dot top-left"></div>)
+          dots.push(<div key={2} className="dot bottom-right"></div>)
+      } else if (die.value === 3) {
+          dots.push(<div key={1} className="dot top-left"></div>)
+          dots.push(<div key={2} className="dot center"></div>)
+          dots.push(<div key={3} className="dot bottom-right"></div>)   
+      } else if (die.value === 4) {
+          dots.push(<div key={1} className="dot top-left"></div>)
+          dots.push(<div key={2} className="dot top-right"></div>)
+          dots.push(<div key={3} className="dot bottom-left"></div>)
+          dots.push(<div key={4} className="dot bottom-right"></div>)
+      } else if (die.value === 5) {
+          dots.push(<div key={1} className="dot top-left"></div>)
+          dots.push(<div key={2} className="dot top-right"></div>)
+          dots.push(<div key={3} className="dot center"></div>)
+          dots.push(<div key={4} className="dot bottom-left"></div>)
+          dots.push(<div key={5} className="dot bottom-right"></div>)
+      } else {
+          dots.push(<div key={1} className="dot top-left"></div>);
+          dots.push(<div key={2} className="dot top-right"></div>);
+          dots.push(<div key={3} className="dot bottom-left"></div>);
+          dots.push(<div key={4} className="dot bottom-right"></div>);
+          dots.push(<div key={5} className="dot top-center"></div>);
+          dots.push(<div key={6} className="dot bottom-center"></div>)
+      }
+
     return dots;
-  };
+  }
 
   return (
     <div

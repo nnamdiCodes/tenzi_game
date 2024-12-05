@@ -29,9 +29,10 @@ function App() {
   const [bestTime, setBestTime] = useState(JSON.parse(localStorage.getItem('bestTime')) || null)
 
   useEffect(() => {
-    setStartTime(Date.now())
+    const newStartTime = Date.now()
+    setStartTime(newStartTime)
    
-  }, [startTime]) 
+  }, []) 
 
   useEffect(() => {
     const allHeld = dice.every(die => die.isHeld)
